@@ -147,7 +147,7 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
 
 -- Meat
 INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
-    (27, 60, '2026-04-25', '2026-04-30'),  -- Ground beef (expired)
+    (27, 60, '2026-04-25', '2026-04-30'),  -- Ground beef
     (27, 35, '2026-04-15', '2026-04-20'),  -- Ground beef (expired)
     (28, 25, '2026-04-29', '2026-05-12'),  -- Beef chuck roast
     (29, 30, '2026-04-22', '2026-04-28'),  -- Ground turkey (expired)
