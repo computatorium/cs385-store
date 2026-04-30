@@ -118,7 +118,7 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
     (6, 30, '2026-04-28', '2026-05-03'),   -- Caesar salad
     (7, 60, '2026-04-23', '2026-05-05'),   -- Yellow bell pepper
     (8, 40, '2026-04-18', '2026-04-23'),   -- Cilantro (expired)
-    (9, 75, '2026-04-21', '2026-04-29'),   -- Sweet corn
+    (9, 75, '2026-04-21', '2026-04-29'),   -- Sweet corn (expired)
     (10, 50, '2026-04-22', '2026-05-12');  -- Yellow onion
 
 -- Dairy
@@ -138,7 +138,7 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
     (19, 24, '2026-04-22', '2026-04-26'),  -- Donuts (expired)
     (20, 40, '2026-04-24', '2026-05-01'),  -- White bread
     (20, 30, '2026-04-12', '2026-04-19'),  -- White bread (expired)
-    (21, 30, '2026-04-21', '2026-04-28'),  -- Plain bagels (expires 4/28)
+    (21, 30, '2026-04-21', '2026-04-28'),  -- Plain bagels (expired)
     (22, 35, '2026-04-19', '2026-04-27'),  -- Whole wheat bread (expired)
     (23, 25, '2026-04-20', '2026-04-27'),  -- Sourdough (expired)
     (24, 20, '2026-04-18', '2026-05-18'),  -- Choc chip cookies
@@ -147,10 +147,10 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
 
 -- Meat
 INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
-    (27, 60, '2026-04-25', '2026-04-30'),  -- Ground beef
+    (27, 60, '2026-04-25', '2026-04-30'),  -- Ground beef (expired)
     (27, 35, '2026-04-15', '2026-04-20'),  -- Ground beef (expired)
     (28, 25, '2026-04-29', '2026-05-12'),  -- Beef chuck roast
-    (29, 30, '2026-04-22', '2026-04-28'),  -- Ground turkey (4/28)
+    (29, 30, '2026-04-22', '2026-04-28'),  -- Ground turkey (expired)
     (30, 40, '2026-04-25', '2026-05-02'),  -- Pulled chicken
     (31, 35, '2026-04-07', '2026-04-23');  -- Eye of round steak (expired)
 
@@ -159,7 +159,7 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
     (32, 80, '2026-03-22', '2026-09-22'),  -- Fruit punch
     (33, 80, '2026-03-22', '2026-09-22'),  -- Lemonade
     (34, 50, '2026-04-19', '2026-05-19'),  -- Orange juice
-    (35, 60, '2026-04-28', '2027-04-28'),  -- Celsius 12pk
+    (35, 60, '2026-04-28', '2027-04-28'),  -- Celsius 12pk (expired)
     (36, 70, '2026-03-19', '2026-12-19'),  -- Arizona iced tea
     (37, 100, '2026-04-09', '2026-10-09'), -- Cola
     (38, 90, '2026-03-17', '2027-01-17');  -- Red bull
@@ -176,7 +176,7 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
 
 -- Deli
 INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
-    (46, 30, '2026-04-27', '2026-04-29'),  -- Hot fried chicken
+    (46, 30, '2026-04-27', '2026-04-29'),  -- Hot fried chicken (expired)
     (47, 25, '2026-04-25', '2026-05-01'),  -- Coleslaw
     (47, 20, '2026-04-15', '2026-04-21'),  -- Coleslaw (expired)
     (48, 25, '2026-04-28', '2026-05-04'),  -- Mustard potato salad
@@ -186,7 +186,7 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
 -- Canned goods
 INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
     (51, 120, '2026-03-22', '2028-03-22'), -- Canned sweet corn
-    (52, 120, '2026-04-28', '2028-04-28'), -- Canned green beans (4/28)
+    (52, 120, '2026-04-28', '2028-04-28'), -- Canned green beans
     (53, 80, '2026-03-27', '2027-09-27'),  -- Mini raviolis
     (54, 60, '2026-04-12', '2028-04-12'),  -- Pear halves
     (55, 90, '2026-03-22', '2028-03-22'),  -- Mixed vegetables
