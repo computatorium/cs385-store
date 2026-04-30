@@ -18,7 +18,7 @@ INSERT INTO Product (Category_ID, Name, Price) VALUES
     -- Produce
     (1, 'Clementines 3lbs', 4.99),
     (1, 'Bananas', 0.24),
-    (1, 'Avacado', 0.88),
+    (1, 'Avocado', 0.88),
     (1, 'Strawberries 16oz', 3.99),
     (1, 'Tomatoes', 0.42),	
     (1, 'Caesar salad 9.9oz', 3.00),
@@ -149,7 +149,7 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
 INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
     (27, 60, '2026-04-25', '2026-04-30'),  -- Ground beef
     (27, 35, '2026-04-15', '2026-04-20'),  -- Ground beef (expired)
-    (28, 25, '2026-04-21', '2026-04-26'),  -- Beef chuck roast (expired)
+    (28, 25, '2026-04-29', '2026-05-12'),  -- Beef chuck roast
     (29, 30, '2026-04-22', '2026-04-28'),  -- Ground turkey (4/28)
     (30, 40, '2026-04-25', '2026-05-02'),  -- Pulled chicken
     (31, 35, '2026-04-07', '2026-04-23');  -- Eye of round steak (expired)
@@ -210,3 +210,42 @@ INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
     (67, 75, '2026-03-17', NULL),          -- Old Spice deodorant
     (68, 100, '2026-03-08', '2028-03-08'), -- Ibuprofen
     (69, 90, '2026-04-28', '2028-04-28');  -- Ricola cough drops
+
+-- Sales examples
+-- ==========================================================================
+
+-- weekly groceries:
+INSERT INTO Sale (Sale_Date) VALUES (curdate());
+
+INSERT INTO product_sold (Product_ID, Sale_ID, Quantity) VALUES
+	(34, (SELECT MAX(Sale_ID) FROM Sale), 1), -- Orange juice
+    (11, (SELECT MAX(Sale_ID) FROM Sale), 1), -- Whole milk
+    (12, (SELECT MAX(Sale_ID) FROM Sale), 1), -- Eggs
+    (2, (SELECT MAX(Sale_ID) FROM Sale), 5), -- Bananas
+    (20, (SELECT MAX(Sale_ID) FROM Sale), 1), -- White bread
+    (16, (SELECT MAX(Sale_ID) FROM Sale), 2), -- Cheddar cheese
+    (39, (SELECT MAX(Sale_ID) FROM Sale), 4), -- Fruit snacks
+    (49, (SELECT MAX(Sale_ID) FROM Sale), 3); -- Sliced turkey breast
+    
+-- BBQ supplies:
+INSERT INTO Sale (Sale_Date) VALUES (curdate());
+
+INSERT INTO product_sold (Product_ID, Sale_ID, Quantity) VALUES
+	(28, (SELECT MAX(Sale_ID) FROM Sale), 3), -- Beef chuck roast
+	(6, (SELECT MAX(Sale_ID) FROM Sale), 2), -- Caesar salad
+	(33, (SELECT MAX(Sale_ID) FROM Sale), 1), -- Lemonade
+	(37, (SELECT MAX(Sale_ID) FROM Sale), 1), -- Cola
+	(47, (SELECT MAX(Sale_ID) FROM Sale), 2), -- Coleslaw
+	(43, (SELECT MAX(Sale_ID) FROM Sale), 1); -- Salt & vinegar chips
+
+
+
+    
+
+
+
+
+
+
+
+
