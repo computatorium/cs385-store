@@ -14,8 +14,9 @@ CREATE TABLE Product (
     Product_ID INT PRIMARY KEY AUTO_INCREMENT,
     Category_ID INT NOT NULL,
     Name VARCHAR(50) NOT NULL,
-    Price DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (Category_ID) REFERENCES Category(Category_ID)
+    Price DECIMAL(10 , 2 ) NOT NULL,
+    FOREIGN KEY (Category_ID)
+        REFERENCES Category (Category_ID)
 );
 
 -- Create Stock
@@ -25,7 +26,8 @@ CREATE TABLE Stock (
     Quantity INT NOT NULL,
     Stock_Date DATE NOT NULL,
     Exp_Date DATE,
-    FOREIGN KEY (Product_ID) REFERENCES Product(Product_ID)
+    FOREIGN KEY (Product_ID)
+        REFERENCES Product (Product_ID)
 );
 
 -- Create Sale
@@ -39,7 +41,9 @@ CREATE TABLE Product_Sold (
     Product_ID INT NOT NULL,
     Sale_ID INT NOT NULL,
     Quantity INT NOT NULL,
-    PRIMARY KEY (Product_ID, Sale_ID),
-    FOREIGN KEY (Product_ID) REFERENCES Product(Product_ID),
-    FOREIGN KEY (Sale_ID) REFERENCES Sale(Sale_ID)
+    PRIMARY KEY (Product_ID , Sale_ID),
+    FOREIGN KEY (Product_ID)
+        REFERENCES Product (Product_ID),
+    FOREIGN KEY (Sale_ID)
+        REFERENCES Sale (Sale_ID)
 );

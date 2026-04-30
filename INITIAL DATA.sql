@@ -1,6 +1,8 @@
 USE Store;
 
 -- Categories
+-- ==========================================================================
+
 INSERT INTO Category (Name) VALUES
     ('Produce'),     -- ID: 1
     ('Dairy'),       -- ID: 2
@@ -14,6 +16,8 @@ INSERT INTO Category (Name) VALUES
     ('Hygiene');     -- ID: 10
     
 -- Products
+-- ==========================================================================
+
 INSERT INTO Product (Category_ID, Name, Price) VALUES
     -- Produce
     (1, 'Clementines 3lbs', 4.99),
@@ -104,7 +108,8 @@ INSERT INTO Product (Category_ID, Name, Price) VALUES
     (10, 'Ibuprofen 200mg 100ct', 7.19),
     (10, 'Ricola cough drops 45ct', 8.29);
 
--- Stock
+-- Stock (17 expired batches as of 4/30)
+-- ==========================================================================
 
 -- Produce
 INSERT INTO Stock (Product_ID, Quantity, Stock_Date, Exp_Date) VALUES
