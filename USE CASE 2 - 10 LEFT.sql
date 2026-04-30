@@ -1,9 +1,9 @@
 SELECT 
-    Product.Name, Stock.Stock_ID
+    Product.Name, SUM(Stock.Quantity)
 FROM
     Product,
     Stock
 WHERE
     Product.Product_ID = Stock.Product_ID
-        AND Stock.Exp_Date < CURRENT_DATE()
-        AND Stock.Quantity > 0; 
+GROUP BY Product.Name
+HAVING SUM(Stock.Quantity) < 10;

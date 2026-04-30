@@ -1,4 +1,4 @@
-SET @PID = 4; -- Strawberries
+SET @PID = 2; -- Bananas
 
 SELECT 
     Stock_ID, Quantity, Exp_Date
